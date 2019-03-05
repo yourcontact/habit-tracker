@@ -26,6 +26,6 @@ class User < ApplicationRecord
 
   def is_following?(user_id)
     relationship = Follow.find_by(follower_id: id, following_id: user_id)
-    return true if relationship
+    relationship.nil? ? false : true
   end
 end
