@@ -1,9 +1,9 @@
 class CreateHabits < ActiveRecord::Migration[5.2]
   def change
     create_table :habits do |t|
-      t.reference :user
+      t.references :user, index: true
       t.string :name
-      t.reference :unit
+      t.references :unit, index: true
       t.integer :repeat
       t.integer :days
       t.time :reminder

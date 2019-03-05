@@ -10,10 +10,54 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_04_165916) do
+ActiveRecord::Schema.define(version: 2019_03_05_111825) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "follows", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "habits", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "name"
+    t.bigint "unit_id"
+    t.integer "repeat"
+    t.integer "days"
+    t.time "reminder"
+    t.integer "score"
+    t.integer "status"
+    t.integer "ratio"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["unit_id"], name: "index_habits_on_unit_id"
+    t.index ["user_id"], name: "index_habits_on_user_id"
+  end
+
+  create_table "score_boards", force: :cascade do |t|
+    t.bigint "owner_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["owner_id"], name: "index_score_boards_on_owner_id"
+  end
+
+  create_table "units", force: :cascade do |t|
+    t.string "name"
+    t.integer "weight"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_score_boards", force: :cascade do |t|
+    t.bigint "score_board_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["score_board_id"], name: "index_user_score_boards_on_score_board_id"
+    t.index ["user_id"], name: "index_user_score_boards_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false

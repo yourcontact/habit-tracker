@@ -1,8 +1,8 @@
 class CreateUserScoreBoards < ActiveRecord::Migration[5.2]
   def change
     create_table :user_score_boards do |t|
-      t.reference :scoreBoard
-      t.reference :user
+      t.references :score_board, index: true
+      t.references :user, index: true
 
       t.timestamps
     end
