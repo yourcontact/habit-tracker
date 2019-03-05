@@ -1,4 +1,4 @@
 class Unit < ApplicationRecord
-  belongs_to :habits
+  has_many :habits
   validates :name, presence: true
 end
