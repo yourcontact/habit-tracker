@@ -5,7 +5,7 @@ class CreateFollows < ActiveRecord::Migration[5.2]
       t.integer 'follower_id', null: false
 
 
-      t.timestamps, null: false
+      t.timestamps null: false
     end
 
     add_index :follows, :following_id
