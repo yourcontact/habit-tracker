@@ -1,6 +1,8 @@
 class Habit < ApplicationRecord
   has_many :users, through: :user_habits
+  has_many :user_habits
   belongs_to :unit
+  belongs_to :user
   #validates :name, presence: true
   #validates :user_id, presence: true
   #validates :unit_id, presence: true
