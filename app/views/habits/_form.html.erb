@@ -1,0 +1,22 @@
+<%= simple_form_for(@habit) do |f| %>
+  <% if @habit.errors.any? %>
+  <h3>You have these errors:</h3>
+  <ul>
+    <% @habit.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+  <% end %>
+
+  <div class="form-inputs">
+    <%= f.input :name, required: true %>
+    <%= f.input :repeat, required: true %>
+    <%= f.input :days, required: true %>
+    <%= f.input :reminder, required: true %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+
+<% end %>
