@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :user_habits
   has_many :habits, through: :user_habits
-  has_many :score_boards
+
 
   has_many :follower_relationships, foreign_key: :following_id, class_name: 'Follow'
   has_many :followers, through: :follower_relationships, source: :followers
