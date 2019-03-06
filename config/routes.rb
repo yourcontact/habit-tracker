@@ -8,4 +8,6 @@ Rails.application.routes.draw do
       post :follow
     end
   end
+
+  resources :habits
 end
