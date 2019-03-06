@@ -8,15 +8,6 @@ class HabitsController < ApplicationController
     @habit = Habit.find(params[:id])
   end
 
-  private
-
-  def habit_params
-    params.require(:habit).permit(:name, :repeat, :days, :reminder)
-  end
-
-  def show
-  end
-
   def new
     @habit = Habit.new
   end
@@ -32,4 +23,8 @@ class HabitsController < ApplicationController
   end
 
   private
+
+  def habit_params
+    params.require(:habit).permit(:name, :repeat, :days, :reminder)
+  end
 end
