@@ -1,7 +1,7 @@
 class HabitsController < ApplicationController
 
   def index
-    @habits = Habits.all
+    @habits = Habit.all
   end
 
   def show
