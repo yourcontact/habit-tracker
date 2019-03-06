@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_05_131538) do
+ActiveRecord::Schema.define(version: 2019_03_06_123307) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,10 +42,9 @@ ActiveRecord::Schema.define(version: 2019_03_05_131538) do
   end
 
   create_table "score_boards", force: :cascade do |t|
-    t.bigint "owner_id"
+    t.integer "total_score"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["owner_id"], name: "index_score_boards_on_owner_id"
   end
 
   create_table "units", force: :cascade do |t|
@@ -64,15 +63,6 @@ ActiveRecord::Schema.define(version: 2019_03_05_131538) do
     t.index ["user_id"], name: "index_user_habits_on_user_id"
   end
 
-  create_table "user_score_boards", force: :cascade do |t|
-    t.bigint "score_board_id"
-    t.bigint "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["score_board_id"], name: "index_user_score_boards_on_score_board_id"
-    t.index ["user_id"], name: "index_user_score_boards_on_user_id"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -82,8 +72,11 @@ ActiveRecord::Schema.define(version: 2019_03_05_131538) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "username"
+    t.bigint "score_board_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["score_board_id"], name: "index_users_on_score_board_id"
   end
 
+  add_foreign_key "users", "score_boards"
 end
