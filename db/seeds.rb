@@ -3,10 +3,10 @@ puts "destoying all seeds..."
 Habit.destroy_all
 User.destroy_all
 Unit.destroy_all
-
+Follow.destroy_all
 
 #create 10 users
-user = User.new(username: "joao", email: "joao@gmail.com", password: "123456")
+user = User.new(username: "rrrrui", email: "braguaboy@gmail.com", password: "123456")
 user.save
 
 user = User.new(username: "kevinfromamerica", email: "kevinfromamerica@gmail.com", password: "123456")
@@ -18,7 +18,7 @@ user.save
 user = User.new(username: "footinvest", email: "manu@gmail.com", password: "123456")
 user.save
 
-user = User.new(username: "braguaboy", email: "braguaboy@gmail.com", password: "123456")
+user = User.new(username: "Porto4ever", email: "beneficasucks@gmail.com", password: "123456")
 user.save
 
 user = User.new(username: "andre", email: "andre@gmail.com", password: "123456")
@@ -56,7 +56,7 @@ unit.save
 
 puts Unit.all
 
-#create 5 habits, 3 habits for the same user User.all[0]
+#create 5 habits, 3 habits for the first user User.all[0]
 habit = Habit.new(name: 'code', repeat: 1, days: 1, reminder: 1)
 habit.user_id = User.all[0].id
 habit.unit_id = Unit.all[0].id
@@ -85,11 +85,19 @@ habit.save
 #looks like Rails c could not print the 2 above in one go. Sometime the terminal bugs.
 puts habit
 
-#create some followers for some users (follower)
+#create some followers for our first user created User.all[0]
+User.all[0].follow(User.all[1].id)
+User.all[0].follow(User.all[2].id)
+User.all[0].follow(User.all[3].id)
+User.all[0].follow(User.all[4].id)
+User.all[0].follow(User.all[5].id)
+User.all[0].follow(User.all[6].id)
+User.all[0].follow(User.all[7].id)
+User.all[0].follow(User.all[8].id)
+User.all[0].follow(User.all[9].id)
+User.all[0].follow(User.all[10].id)
 
-
-
-#make some users follow some other users (following)
+puts User.all[0].following_relationships
 
 
 
