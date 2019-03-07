@@ -1,18 +1,14 @@
 class ScoreboardsController < ApplicationController
   before_action :my_followers, only: [:index]
   def index
-
-    @users = User.all
-    raise
   end
-#
 
-private
+  private
 
-def my_followers
-   @user = current_user
-   @followers = @user.following_relationships
-
+  def my_followers
+    @users = User.all
+    @user = current_user
+    @follows = @user.following_relationships.map { |following_relationship| @users.find(following_relationship.following_id) }
+  end
 end
-# a method for a user to see all his followers should be a where
-end
+

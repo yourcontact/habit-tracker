@@ -1,10 +1,10 @@
-<h1>Scoreboards</h1>
+<h1>Scoreboard</h1>
 <br>
-<h2>Friends</h2>
 <p><%= @user.username %></p>
-// add each method to print all people current_user follows
-<p><%= @user.following_relationships.each_with_index do|index|%></p>
-<p><%=  ["#{index}"] %></p>
+<h2>Friends</h2>
+
+<% @follows.each do |follow| %>
+<p><%= follow.username %> <%= follow.score %></p>
 <% end %>
 
 
@@ -15,4 +15,7 @@
 
 
 
-<p><%= @users.find(@user.following_relationships[0].following_id).username %></p>
+
+
+
+
