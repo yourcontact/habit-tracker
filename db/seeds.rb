@@ -47,7 +47,7 @@ user.save
 
 puts User.all
 
-#create minutes and L units
+#create minute and L units
 unit = Unit.new(name: 'minute', weight: 1)
 unit.save
 
