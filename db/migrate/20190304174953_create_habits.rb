@@ -4,8 +4,8 @@ class CreateHabits < ActiveRecord::Migration[5.2]
       t.references :user, index: true
       t.string :name
       t.references :unit, index: true
-      t.integer :repeat
-      t.integer :days
+      t.boolean :daily, default: true
+      t.string :days, array: true, default: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
       t.time :reminder
       t.integer :score
       t.integer :status

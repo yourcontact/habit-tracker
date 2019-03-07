@@ -29,8 +29,8 @@ ActiveRecord::Schema.define(version: 2019_03_05_131538) do
     t.bigint "user_id"
     t.string "name"
     t.bigint "unit_id"
-    t.integer "repeat"
-    t.integer "days"
+    t.boolean "daily", default: true
+    t.string "days", default: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"], array: true
     t.time "reminder"
     t.integer "score"
     t.integer "status"
