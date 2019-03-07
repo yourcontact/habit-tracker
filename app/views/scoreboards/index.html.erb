@@ -1,0 +1,21 @@
+<h1>Scoreboard</h1>
+<br>
+<p><%= @user.username %></p>
+<h2>Friends</h2>
+
+<% @follows.each do |follow| %>
+<p><%= follow.username %> <%= follow.score %></p>
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
