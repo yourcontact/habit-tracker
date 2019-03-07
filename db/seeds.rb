@@ -12,7 +12,7 @@ user.save
 user = User.new(username: "kevinfromamerica", email: "kevinfromamerica@gmail.com", password: "123456", score: "23")
 user.save
 
-user = User.new(username: "antonio", email: "joao@gmail.com", password: "123456", score: "234")
+user = User.new(username: "antonio", email: "joao@gmail.com", password: "123456", score: "235")
 user.save
 
 user = User.new(username: "footinvest", email: "manu@gmail.com", password: "123456", score: "12")
