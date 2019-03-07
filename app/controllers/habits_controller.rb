@@ -22,6 +22,8 @@ class HabitsController < ApplicationController
     end
   end
 
+  private
+
   def habit_params
     params.require(:habit).permit(:name, :repeat, :days, :reminder)
   end
