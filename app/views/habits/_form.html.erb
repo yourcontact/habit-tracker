@@ -10,10 +10,11 @@
 
   <div class="form-inputs">
     <%= f.input :name, required: true %>
-    <%= f.input :repeat, required: true %>
-    <%= f.input :days, required: true %>
-    <%= f.input :reminder, required: true %>
+    <%= f.input :daily, required: true, as: :radio_buttons %>
+    <%= f.input :days, as: :check_boxes,include_hidden: false, collection: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"] %>
+    <%#= f.input :reminder, required: true %>
     <%= f.association :unit, include_blank: false, as: :radio_buttons  %>
+    <%= f.input :reminder, required: true %>
     <%#= f.association :unit as: :radio_buttons %>
   </div>
 

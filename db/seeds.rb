@@ -57,17 +57,17 @@ unit.save
 puts Unit.all
 
 #create 5 habits, 3 habits for the first user User.all[0]
-habit = Habit.new(name: 'code', repeat: 1, days: 1, reminder: 1)
+habit = Habit.new(name: 'code', reminder: 1)
 habit.user_id = User.all[0].id
 habit.unit_id = Unit.all[0].id
 habit.save
 
-habit = Habit.new(name: 'drink SUPER BOCA', repeat: 1, days: 1, reminder: 1)
+habit = Habit.new(name: 'drink SUPER BOCA', reminder: 1)
 habit.user_id = User.all[0].id
 habit.unit_id = Unit.all[1].id
 habit.save
 
-habit = Habit.new(name: 'get ready for code and SUPER BOCA again', repeat: 1, days: 1, reminder: 1)
+habit = Habit.new(name: 'get ready for code and SUPER BOCA again', reminder: 1)
 habit.user_id = User.all[0].id
 habit.unit_id = Unit.all[0].id
 habit.save

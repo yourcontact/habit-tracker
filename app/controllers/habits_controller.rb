@@ -22,9 +22,22 @@ class HabitsController < ApplicationController
     end
   end
 
+  def edit
+    @habit = Habit.find(params[:id])
+  end
+
+  def update
+    @habit = Habit.find(params[:id])
+    if @habit.update(habit_params)
+      redirect_to habits_path
+    else
+      render :edit
+    end
+  end
+
   private
 
   def habit_params
-    params.require(:habit).permit(:name, :repeat, :days, :reminder, :unit_id)
+    params.require(:habit).permit(:name, :repeat, :reminder, :unit_id, :daily, :days => [])
   end
 end
