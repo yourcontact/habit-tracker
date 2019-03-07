@@ -34,7 +34,16 @@ class ScoreboardsController < ApplicationController
   def sort_scores(scores)
     scores.sort.reverse
   end
+
+  # #find user where scores = user.score
+  # def find_user_with_score(scores)
+  #   scores.each do |score|
+  #     user_score.where("user_score.score = score")
+  #   end
+  # end
+
+  #    #get score of each user our current use follow
+  # def user_score
+  #   @users.map(&:score)
+  # end
 end
-
-
-
