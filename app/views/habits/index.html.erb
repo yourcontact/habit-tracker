@@ -1,1 +1,8 @@
 <h1>HABITS</h1>
+
+<% @habits.each do |habit| %>
+<p><%= habit.name %></p>
+<% end %>
+<p><%=link_to 'New Habit', new_habit_path%></p>
+<p><%=link_to 'Scoreboard' %></p>
+
