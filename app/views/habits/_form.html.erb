@@ -8,18 +8,27 @@
   </ul>
   <% end %>
 
-  <div class="form-inputs">
-    <%= f.input :name, required: true %>
-    <%= f.input :daily, required: true, as: :radio_buttons %>
-    <%= f.input :days, as: :check_boxes,include_hidden: false, collection: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"] %>
-    <%= f.input :count, required: true %>
-    <%= f.association :unit, include_blank: false, as: :radio_buttons  %>
-    <%= f.input :reminder, required: true %>
-    <%#= f.association :unit as: :radio_buttons %>
-  </div>
+<div class="container">
+  <div class="row">
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form">
+    <div class="form-inputs">
+
+        <%= f.input :name, required: true %>
+        <%#= f.input :daily, required: true, as: :radio_buttons %>
+        <%= f.input :days, as: :check_boxes,include_hidden: false, collection: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"] ,:style => 'display: flex;'%>
+        <%= f.input :count, required: true %>
+        <%= f.association :unit, include_blank: false, as: :radio_buttons  %>
+        <%= f.input :reminder, required: true, :style => 'display: flex;  ' %>
+        <%#= f.association :unit as: :radio_buttons %>
+      </div>
+      <div class="form-actions">
+        <%= f.button :submit, class: 'btn btn-warning' %>
+      </div>
+
+
   </div>
+  </div>
+</div>
 
 <% end %>
