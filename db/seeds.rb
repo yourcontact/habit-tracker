@@ -48,10 +48,16 @@ user.save
 puts User.all
 
 #create minute and L units
-unit = Unit.new(name: 'minute', weight: 1)
+unit = Unit.new(name: 'Minutes', weight: 1)
 unit.save
 
-unit = Unit.new(name: 'L', weight: 1)
+unit = Unit.new(name: 'Milliliters', weight: 1)
+unit.save
+
+unit = Unit.new(name: 'Kilometers', weight: 1)
+unit.save
+
+unit = Unit.new(name: 'Times', weight: 1)
 unit.save
 
 puts Unit.all
