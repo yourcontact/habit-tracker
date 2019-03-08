@@ -1,8 +1,16 @@
-<h1>HABITS</h1>
 
-<% @habits.each do |habit| %>
-<p><%=link_to habit.name, edit_habit_path(habit) %></p>
-<% end %>
-<p><%=link_to 'New Habit', new_habit_path%></p>
-<p><%=link_to 'Scoreboard' %></p>
+  <script type="text/javascript">
+  let clicks = 0;
+  function onClick() {
+      clicks += 1;
+      document.getElementById("clicks").innerHTML = clicks;
+  };
+  </script>
+  <h1>Habits</h1>
+
+  <% @habits.each do |habit| %>
+  <p><%=link_to habit.name, edit_habit_path(habit) %></p>
+  <button type="button" onClick="onClick()">Click me</button>
+  <p><%= habit.count %> <a id="clicks">0</a></p>
+  <% end %>
 
