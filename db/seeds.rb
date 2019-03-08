@@ -6,43 +6,43 @@ Unit.destroy_all
 Follow.destroy_all
 
 #create 10 users
-user = User.new(username: "rrrrui", email: "braguaboy@gmail.com", password: "123456")
+user = User.new(username: "rrrrui", email: "braguaboy@gmail.com", password: "123456", score: "234")
 user.save
 
-user = User.new(username: "kevinfromamerica", email: "kevinfromamerica@gmail.com", password: "123456")
+user = User.new(username: "kevinfromamerica", email: "kevinfromamerica@gmail.com", password: "123456", score: "23")
 user.save
 
-user = User.new(username: "antonio", email: "joao@gmail.com", password: "123456")
+user = User.new(username: "antonio", email: "joao@gmail.com", password: "123456", score: "235")
 user.save
 
-user = User.new(username: "footinvest", email: "manu@gmail.com", password: "123456")
+user = User.new(username: "footinvest", email: "manu@gmail.com", password: "123456", score: "12")
 user.save
 
-user = User.new(username: "Porto4ever", email: "beneficasucks@gmail.com", password: "123456")
+user = User.new(username: "Porto4ever", email: "beneficasucks@gmail.com", password: "123456", score: "321")
 user.save
 
-user = User.new(username: "andre", email: "andre@gmail.com", password: "123456")
+user = User.new(username: "andre", email: "andre@gmail.com", password: "123456", score: "153")
 user.save
 
-user = User.new(username: "patrick", email: "patrick@gmail.com", password: "123456")
+user = User.new(username: "patrick", email: "patrick@gmail.com", password: "123456", score: "76")
 user.save
 
-user = User.new(username: "ricardobrazil", email: "ricardobrazil@gmail.com", password: "123456")
+user = User.new(username: "ricardobrazil", email: "ricardobrazil@gmail.com", password: "123456", score: "89")
 user.save
 
-user = User.new(username: "anonymous", email: "anonymous@gmail.com", password: "123456")
+user = User.new(username: "anonymous", email: "anonymous@gmail.com", password: "123456", score: "3")
 user.save
 
-user = User.new(username: "michel", email: "michel@gmail.com", password: "123456")
+user = User.new(username: "michel", email: "michel@gmail.com", password: "123456", score: "32")
 user.save
 
-user = User.new(username: "pedro", email: "pedro@gmail.com", password: "123456")
+user = User.new(username: "pedro", email: "pedro@gmail.com", password: "123456", score: "133")
 user.save
 
-user = User.new(username: "michael", email: "michael@gmail.com", password: "123456")
+user = User.new(username: "michael", email: "michael@gmail.com", password: "123456", score: "145")
 user.save
 
-user = User.new(username: "yesman", email: "yesman@gmail.com", password: "123456")
+user = User.new(username: "yesman", email: "yesman@gmail.com", password: "123456", score: "98")
 user.save
 
 puts User.all
