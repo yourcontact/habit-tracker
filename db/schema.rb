@@ -29,14 +29,16 @@ ActiveRecord::Schema.define(version: 2019_03_07_170122) do
     t.bigint "user_id"
     t.string "name"
     t.bigint "unit_id"
-    t.integer "repeat"
-    t.integer "days"
+    t.integer "count"
+    t.boolean "daily", default: true
+    t.string "days", default: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"], array: true
     t.time "reminder"
     t.integer "score"
     t.integer "status"
     t.integer "ratio"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["count"], name: "index_habits_on_count"
     t.index ["unit_id"], name: "index_habits_on_unit_id"
     t.index ["user_id"], name: "index_habits_on_user_id"
   end
