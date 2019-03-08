@@ -1,0 +1,22 @@
+.title {
+padding: 20px;
+}
+
+.scoreboard {
+  display: flex;
+  align-items: baseline;
+  padding: 20px;
+  border-bottom: 1px solid rgba(220,224,244,0.4);
+}
+.scoreboard-username {
+  padding-left: 50px;
+  min-width: 250px;
+}
+.scoreboard-username h3 {
+  font-size: 17px;
+  margin-bottom: 0px;
+}
+.scoreboard-score {
+  font-size: 14px;
+  font-weight: bold;
+}
