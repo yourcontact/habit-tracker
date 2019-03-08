@@ -11,7 +11,7 @@
   <% @habits.each do |habit| %>
   <p><%=link_to habit.name, edit_habit_path(habit) %></p>
   <button type="button" onClick="onClick()">Click me</button>
-  <p><%= habit.count %> <a id="clicks">0</a></p>
+  <p> <%= habit.count %> <a id="clicks">0</a></p>
   <% end %>
 
 
