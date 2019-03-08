@@ -2,9 +2,10 @@
 <br>
 <h2>Friends</h2>
 
-<% @sort_scores.each do |score| %>
-<p><%= score %></p>
+<% @users.each do |user| %>
+  <p><%= user.username %> <%= user.score %></p>
 <% end %>
+
 
 
 
