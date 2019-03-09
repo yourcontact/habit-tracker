@@ -1,4 +1,4 @@
-puts "destoying all seeds..."
+puts "reset all seeds..."
 
 Habit.destroy_all
 User.destroy_all
@@ -45,8 +45,6 @@ user.save
 user = User.new(username: "yesman", email: "yesman@gmail.com", password: "123456", score: "98")
 user.save
 
-puts User.all
-
 #create minute and L units
 unit = Unit.new(name: 'Minutes', weight: 1)
 unit.save
@@ -59,8 +57,6 @@ unit.save
 
 unit = Unit.new(name: 'Times', weight: 1)
 unit.save
-
-puts Unit.all
 
 #create 5 habits, 3 habits for the first user User.all[0]
 habit = Habit.new(name: 'code', reminder: 1)
@@ -89,7 +85,6 @@ habit.save
 # habit.save
 
 #looks like Rails c could not print the 2 above in one go. Sometime the terminal bugs.
-puts habit
 
 #create some followers for our first user created User.all[0]
 User.all[0].follow(User.all[1].id)
@@ -102,9 +97,6 @@ User.all[0].follow(User.all[7].id)
 User.all[0].follow(User.all[8].id)
 User.all[0].follow(User.all[9].id)
 User.all[0].follow(User.all[10].id)
-
-puts User.all[0].following_relationships
-
 
 
 
