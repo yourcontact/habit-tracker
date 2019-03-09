@@ -1,7 +1,7 @@
 class HabitsController < ApplicationController
 
   def index
-    @habits = Habit.all
+    @habits = Habit.where(user: current_user)
   end
 
   def show
