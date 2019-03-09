@@ -16,6 +16,8 @@ gem 'sassc-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
+gem 'bootstrap'
+gem 'jquery-rails'
 
 
 group :development do
