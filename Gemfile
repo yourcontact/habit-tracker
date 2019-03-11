@@ -18,6 +18,8 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'bootstrap'
 gem 'jquery-rails'
+gem "letter_opener", group: :development
+gem 'dotenv-rails', groups: [:development, :test]
 
 
 group :development do

@@ -16,6 +16,7 @@ class HabitsController < ApplicationController
     @habit = Habit.new(habit_params)
     @habit.user = current_user
     if @habit.save
+      HabitMailer.creation_confirmation(@habit).deliver_now
       redirect_to habits_path
     else
       render :new
