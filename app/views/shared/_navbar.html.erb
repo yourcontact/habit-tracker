@@ -59,7 +59,7 @@
         <% if user_signed_in? %>
         <li><a href="<%= habits_path  %>">Habits</a></li>
         <li><a href="<%= new_habit_path %>">New Habit</a></li>
-        <li><a href="#">Scoreboard</a></li>
+        <li><a href="<%= scoreboards_path%>">Scoreboard</a></li>
         <li><%=link_to destroy_user_session_path, method: :delete do %>
           <i class="fa fa-sign-out"></i><%= t(".sign_out", default:"Log out") %>
           <% end %>
