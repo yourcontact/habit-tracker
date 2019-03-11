@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'habit_tracker@lewagon.org'
+  default from: 'blabla@gmail.com'
   layout 'mailer'
 end
