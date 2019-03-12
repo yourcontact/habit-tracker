@@ -1,0 +1,40 @@
+.banner {
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), image-url("pexels-photo.jpg");
+  background-size: cover;
+  background-position: center;
+  h1 {
+    color: white;
+    font-weight: bold;
+    font-size: 45px;
+  }
+  p {
+    color: white;
+    opacity: .8;
+    font-size: 25px;
+    font-weight: lighter;
+    margin-bottom: 30px;
+  }
+  .btn {
+    padding: 15px 50px;
+    background-color: #FF002D;
+  }
+
+  .btn:hover{
+    background-color: black;
+    border-color: transparent;
+  }
+}
+.navbar-home {
+  position: absolute;
+  width: 100%;
+  background: transparent;
+  box-shadow: none;
+  .navbar-wagon-link {
+    color: white;
+    font-weight: bold;
+  }
+}

@@ -13,8 +13,8 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:log_in, keys: [:username])
   end
 
-  def disable_nav
-  @disable_nav = true
+  def skip_footer
+    @skip_footer = true
   end
 
 end
