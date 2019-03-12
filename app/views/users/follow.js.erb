@@ -1,4 +1,4 @@
-document.getElementById("user-<%= @user.id %>").innerHTML = "<%= j render 'users/user_item', user: @user %>"
+document.getElementById("user-<%= @user.id %>").outerHTML = "<%= j render 'users/user_item', user: @user %>"
 
 
 
