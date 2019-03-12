@@ -1,7 +1,7 @@
 <h1 class="title">Habits</h1>
 
 <% @habits.each do |habit| %>
- <p><%=link_to habit.name, edit_habit_path(habit) %></p>
+  <%= render 'habits/habit_item', habit: habit %>
 <% end %>
 
 
