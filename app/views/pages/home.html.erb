@@ -1,37 +1,10 @@
-<div id="myCarousel" class="carousel slide" data-interval="false">
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-      <div class="item bg bg1 active">
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>Habits</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius necessitatibus ipsa inventore enim obcaecati nam nemo quae tempora vel, nostrum ab non officia dolore magnam, numquam sit, maxime! Quidem, laboriosam.</p>
-          </div>
-        </div>
-      </div>
-      <div class="item bg bg2">
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>Habits</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas quia ea voluptatum! Doloremque debitis repellat aspernatur officiis reprehenderit, reiciendis voluptate cumque, aut error vel tenetur vitae magnam, quisquam, molestiae perspiciatis.</p>
-          </div>
-        </div>
-      </div>
-      <div class="item bg bg1">
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>Habits</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia necessitatibus esse, facilis assumenda asperiores expedita laborum magnam consequuntur aliquam rerum! Quas officia ea, accusamus praesentium ipsa veniam enim quam numquam.</p>
-            <p><a class="btn btn-lg btn-danger" href="<%= new_user_session_path %>" role="button">Sign In</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-  </div>
 
+<%= content_for(:navbar_class, "navbar-home") %>
+
+<div class="banner">
+  <div class="banner-content text-center">
+    <h1>Change your life: Build habits!</h1>
+    <p>"Chains of habit are too light to be felt until they are too heavy to be broken"</p>
+    <%= link_to "Start now", new_user_session_path, class: "btn btn-lg btn-danger"  %>
+  </div>
+</div>
