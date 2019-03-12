@@ -1,11 +1,16 @@
-<h1>Follow your friends</h1>
-<%= form_tag users_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Search for friends"
-  %>
-<% end %>
+<div class="title">
+  <h1>Follow your friends</h1>
+</div>
+
+<div class="scoreboard-search">
+  <%= form_tag users_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Search for friends"
+    %>
+  <% end %>
+</div>
 
 <div class="scoreboard">
   <% @users.each do |user| %>
