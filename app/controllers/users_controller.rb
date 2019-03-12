@@ -3,7 +3,11 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:follow, :unfollow]
 
   def index
-    @users = User.where.not(id: current_user.id)
+    if params[:query].present?
+      @users = User.where.not(id: current_user.id).where("username ILIKE ?", "%#{params[:query]}%")
+    else
+      @users = []
+    end
   end
 
   def follow
@@ -28,9 +32,5 @@ class UsersController < ApplicationController
 
   def set_user
     @user = User.find(params[:id])
-  end
-
-  def self.find_by_username(term)
-    User.where("username ILIKE ?", "%#{term}%")
   end
 end

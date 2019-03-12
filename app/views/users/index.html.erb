@@ -1,8 +1,12 @@
-<h1>Add your friends</h1>
+<h1>Follow your friends</h1>
 <%= form_tag users_path, method: :get do %>
   <%= text_field_tag :query,
     params[:query],
     class: "form-control",
     placeholder: "Search for friends"
   %>
+<% end %>
+
+<% @users.each do |user|  %>
+<p><%= user.username %></p>
 <% end %>
