@@ -4,6 +4,12 @@ body {
    padding:0;
    height:100%;
 }
+// to make footer stick to bottom:
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 #container {
    min-height:100%;
    position:relative;
