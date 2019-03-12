@@ -7,26 +7,30 @@ class UsersController < ApplicationController
   end
 
   def follow
-   if current_user.follow(@user.id)
-     respond_to do |format|
-       format.html { redirect_to root_path }
-       format.js
-     end
+    if current_user.follow(@user.id)
+    respond_to do |format|
+     format.html { redirect_to root_path }
+     format.js
+    end
    end
   end
 
   def unfollow
-   if current_user.unfollow(@user.id)
-     respond_to do |format|
-       format.html { redirect_to root_path }
-       format.js { render action: :follow }
-     end
-   end
+    if current_user.unfollow(@user.id)
+    respond_to do |format|
+     format.html { redirect_to root_path }
+     format.js { render action: :follow }
+    end
+    end
   end
 
   private
 
   def set_user
-   @user = User.find(params[:id])
+    @user = User.find(params[:id])
+  end
+
+  def self.find_by_username(term)
+    User.where("username ILIKE ?", "%#{term}%")
   end
 end
