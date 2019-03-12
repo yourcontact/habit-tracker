@@ -7,6 +7,8 @@
   %>
 <% end %>
 
-<% @users.each do |user| %>
-<%= render 'users/user_item', user: user %>
-<% end %>
+<div class="scoreboard">
+  <% @users.each do |user| %>
+      <%= render 'users/user_item', user: user %>
+  <% end %>
+</div>
