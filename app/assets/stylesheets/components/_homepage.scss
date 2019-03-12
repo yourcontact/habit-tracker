@@ -1,3 +1,4 @@
+
 .banner {
   height: 100vh;
   display: flex;
@@ -16,6 +17,7 @@
     opacity: .8;
     font-size: 25px;
     font-weight: lighter;
+    font-style: italic;
     margin-bottom: 30px;
   }
   .btn {
@@ -28,6 +30,7 @@
     border-color: transparent;
   }
 }
+
 .navbar-home {
   position: absolute;
   width: 100%;
