@@ -3,20 +3,21 @@
   <h1>Scoreboard</h1>
 </div>
 
-<br>
-
-<% @users.each do |user| %>
 <div class="scoreboard">
-  <img class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
-  <div class="scoreboard-username">
-    <h3><%= user.username %></h3>
-  </div>
+  <% @users.each do |user| %>
+    <div class="scoreboard-card">
+      <img class="scoreboard-avatar" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
 
-  <div class="scoreboard-score">
-    <p class="score"><%= user.score %></p>
-  </div>
+      <div class="scoreboard-username">
+        <h4><%= user.username %></h4>
+      </div>
+
+      <div class="scoreboard-score">
+        <p class="score"><%= user.score %></p>
+      </div>
+    </div>
+  <% end %>
 </div>
-<% end %>
 
 
 
