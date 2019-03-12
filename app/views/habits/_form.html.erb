@@ -16,8 +16,8 @@
             <%= f.input :name, required: true %>
             <%= f.input :reminder, required: true, :style => 'display: flex;'%>
           </div>
-          <div class="form-actions style="text-align:center"">
-            <%= f.button :submit %>
+          <div class="form-actions form-habit-submit">
+            <%= f.button  :submit %>
           </div>
           <div id="delete-btn">
             <% if !current_page?('/habits/new') %>
