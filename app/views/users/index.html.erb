@@ -8,5 +8,5 @@
 <% end %>
 
 <% @users.each do |user|  %>
-<p><%= user.username %></p>
+<p><%=link_to user.username, follow_user_path(user), method: :post %></p>
 <% end %>
