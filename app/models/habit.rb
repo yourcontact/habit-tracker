@@ -2,6 +2,7 @@ class Habit < ApplicationRecord
   has_many :users, through: :user_habits
   has_many :user_habits
   belongs_to :user
+  enum status: [ :undone, :done]
   #before_save :remove_blanks
 
   #validates :days, inclusion: { in: %w(Mon Tue Wed Thu Fri Sat Sun)}

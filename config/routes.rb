@@ -9,7 +9,11 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :habits
+  resources :habits do
+    member do
+      post :done
+    end
+  end
 
   resources :scoreboards, only: [:index]
 end

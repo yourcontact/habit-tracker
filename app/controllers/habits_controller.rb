@@ -35,6 +35,13 @@ class HabitsController < ApplicationController
     end
   end
 
+  def done
+    @habit = Habit.find(params[:id])
+    @habit.done!
+    current_user.score += 1
+    current_user.save
+  end
+
   def destroy
     @habit = Habit.find(params[:id])
     @habit.destroy
