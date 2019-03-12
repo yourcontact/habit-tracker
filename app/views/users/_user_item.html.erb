@@ -1,0 +1,16 @@
+<div class="scoreboard" id="user-<%= user.id %>">
+  <img class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
+  <div class="scoreboard-username">
+    <p><%= user.username %></p>
+  </div>
+
+  <div class="scoreboard-score">
+   <p>
+    <% if current_user.is_following?(user) %>
+      <%= link_to "unfollow", unfollow_user_path(user), method: :post, remote: true %>
+      <% else %>
+      <%= link_to "follow", follow_user_path(user), method: :post, remote: true %>
+      <% end %>
+   </p>
+  </div>
+</div>

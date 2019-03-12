@@ -7,6 +7,6 @@
   %>
 <% end %>
 
-<% @users.each do |user|  %>
-<p><%=link_to user.username, follow_user_path(user), method: :post %></p>
+<% @users.each do |user| %>
+<%= render 'users/user_item', user: user %>
 <% end %>

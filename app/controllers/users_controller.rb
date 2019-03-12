@@ -21,7 +21,7 @@ class UsersController < ApplicationController
   def unfollow
     if current_user.unfollow(@user.id)
      respond_to do |format|
-     format.html { redirect_to root_path }
+     format.html { redirect_to users_path }
      format.js { render action: :follow }
     end
     end
