@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :users, only: [:index] do
     member do
       post :follow
-      post :follow
+      post :unfollow
     end
   end
 

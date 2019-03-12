@@ -7,7 +7,6 @@ class Habit < ApplicationRecord
 
   #validates :days, inclusion: { in: %w(Mon Tue Wed Thu Fri Sat Sun)}
 
-
   # validates :name, presence: true
   # validates :user_id, presence: true
   # validates :unit_id, presence: true
