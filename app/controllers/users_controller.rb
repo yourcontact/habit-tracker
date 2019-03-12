@@ -5,7 +5,7 @@ class UsersController < ApplicationController
     if params[:query].present?
       @users = User.where.not(id: current_user.id).where("username ILIKE ?", "#{params[:query]}%")
     else
-      @users = []
+      @users = User.where.not(id: current_user.id)
     end
   end
 
