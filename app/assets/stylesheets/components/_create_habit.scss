@@ -25,4 +25,21 @@
   .form-check-label {
     padding: 0px 12px;
   }
+  .form-inputs input, select {
+    border-radius: 12px;
+    border-color: transparent;
+    background-color: #F3F3F3;
+  }
+  &-submit {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 }
+
+#delete-btn {
+  color: #D5D5D5;
+  font-size: 16px;
+}
+
+

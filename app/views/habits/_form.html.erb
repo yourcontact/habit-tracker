@@ -14,15 +14,15 @@
       <div class="form-habit">
         <div class="form-inputs">
             <%= f.input :name, required: true %>
-            <%#= f.input :daily, required: true, as: :radio_buttons %>
-            <%= f.input :days, as: :check_boxes,include_hidden: false, collection: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"] ,:style => 'display: flex;'%>
-            <%= f.input :count, required: true %>
-            <%= f.association :unit, include_blank: false, as: :radio_buttons  %>
-            <%= f.input :reminder, required: true, :style => 'display: flex;  ' %>
-            <%#= f.association :unit as: :radio_buttons %>
+            <%= f.input :reminder, required: true, :style => 'display: flex;'%>
           </div>
-          <div class="form-actions style="text-align:center"">
-            <%= f.button :submit %>
+          <div class="form-actions form-habit-submit">
+            <%= f.button  :submit %>
+          </div>
+          <div id="delete-btn">
+            <% if !current_page?('/habits/new') %>
+            <p><%= link_to 'Give up/delete', habit_path, method: :delete %></p>
+            <% end %>
           </div>
       </div>
     </div>
