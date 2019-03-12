@@ -1,7 +1,6 @@
 class Habit < ApplicationRecord
   has_many :users, through: :user_habits
   has_many :user_habits
-  belongs_to :unit
   belongs_to :user
   #before_save :remove_blanks
 
@@ -16,6 +15,6 @@ class Habit < ApplicationRecord
   # validates :status, default: 0
 
   #def remove_blanks
-   # self.days.reject!(&:blank?).to_s
+  # self.days.reject!(&:blank?).to_s
   #end
 end

@@ -35,9 +35,15 @@ class HabitsController < ApplicationController
     end
   end
 
+  def destroy
+    @habit = Habit.find(params[:id])
+    @habit.destroy
+    redirect_to habits_path
+  end
+
   private
 
   def habit_params
-    params.require(:habit).permit(:name, :daily, :repeat, :reminder, :unit_id, :count, :days => [])
+    params.require(:habit).permit(:name, :reminder)
   end
 end

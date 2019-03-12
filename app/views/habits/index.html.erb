@@ -1,8 +1,7 @@
+<h1>Habits</h1>
 
-  <h1>Habits</h1>
-
-  <% @habits.each do |habit| %>
-  <p><%=link_to habit.name, edit_habit_path(habit) %></p>
-  <% end %>
+<% @habits.each do |habit| %>
+<p><%=link_to habit.name, edit_habit_path(habit) %></p>
+<% end %>
 
 
