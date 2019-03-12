@@ -1,77 +1,85 @@
-.form {
-  margin-top: 50px;
-  margin-bottom: 50px;
+.form-login {
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  margin: auto;
-  text-align: center;
-  vertical-align: middle;
-  //font-size: 10px;
-  //padding: 20px, 20px auto;
+  padding: 10px 20px;
+  margin-top: 50px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  h2 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .btn {
+    width: 50%;
+    margin-bottom: 20px;
+    background-color: #FF002D;
+    border-radius: 3px;
+    color: white;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+    font-size: small;
+  }
+  .form-check-label {
+    padding: 0px 12px;
+  }
 }
 
-.form-inputs{
-  margin-top: 10%;
+#user_email{
+  border-radius: 12px;
+  border-color: transparent;
+  background-color: #F3F3F3;
+  text-decoration: none;
 }
 
-.d-flex{
-  display: flex;
-  padding-bottom: 25px;
-  justify-content: space-around;
-  width: 50%;
-  margin: auto;
+#user_username{
+  border-radius: 12px;
+  border-color: transparent;
+  background-color: #F3F3F3;
+  text-decoration: none;
 }
 
-#habit_name{
-  width: 50%;
+#user_password{
+  border-radius: 12px;
+  border-color: transparent;
+  background-color: #F3F3F3;
+  text-decoration: none;
 }
 
-.form-control{
-  border-radius: 30px;
-  width: 15%;
-  margin-right: auto;
-  margin-left: auto;
+.form-signup {
+  background: white;
+  padding: 10px 20px;
+  margin-top: 50px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  h2 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .btn {
+    width: 50%;
+    margin-bottom: 20px;
+    background-color: #FF002D;
+    border-radius: 3px;
+    color: white;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+    font-size: small;
+  }
+  .form-check-label {
+    padding: 0px 12px;
+  }
 }
 
-.form-group{
-  padding-top: 10px;
-
-
-}
-
-.form-actions{
-  padding-bottom: 40px;
-}
-
-.collection_check_boxes {
-  padding: 10px;
-}
-
-.collection_radio_buttons {
-  padding: 10px;
-}
-
-.form-check-input{
-  //color: red;
-}
-
-#habit_days_mon{
-  color: red;
-}
-
-
-.habit_days{
-  display:flex;
-  justify-content: space-around;
-  margin-right: 10%;
-  margin-left: 10%;
-}
-
-
-.habit_unit{
-  display:flex;
-  justify-content: space-around;
-  margin-right: 10%;
-  margin-left: 10%;
-
+#user_password_confirmation{
+  border-radius: 12px;
+  border-color: transparent;
+  background-color: #F3F3F3;
+  text-decoration: none;
 }

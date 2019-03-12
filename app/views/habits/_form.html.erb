@@ -10,24 +10,22 @@
 
 <div class="container">
   <div class="row">
-
-  <div class="form">
-    <div class="form-inputs">
-
-        <%= f.input :name, required: true %>
-        <%#= f.input :daily, required: true, as: :radio_buttons %>
-        <%= f.input :days, as: :check_boxes,include_hidden: false, collection: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"] ,:style => 'display: flex;'%>
-        <%= f.input :count, required: true %>
-        <%= f.association :unit, include_blank: false, as: :radio_buttons  %>
-        <%= f.input :reminder, required: true, :style => 'display: flex;  ' %>
-        <%#= f.association :unit as: :radio_buttons %>
+    <div class="col-xs-12-col-sm-4-col-sm-offset-4">
+      <div class="form-habit">
+        <div class="form-inputs">
+            <%= f.input :name, required: true %>
+            <%#= f.input :daily, required: true, as: :radio_buttons %>
+            <%= f.input :days, as: :check_boxes,include_hidden: false, collection: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"] ,:style => 'display: flex;'%>
+            <%= f.input :count, required: true %>
+            <%= f.association :unit, include_blank: false, as: :radio_buttons  %>
+            <%= f.input :reminder, required: true, :style => 'display: flex;  ' %>
+            <%#= f.association :unit as: :radio_buttons %>
+          </div>
+          <div class="form-actions style="text-align:center"">
+            <%= f.button :submit %>
+          </div>
       </div>
-      <div class="form-actions">
-        <%= f.button :submit, class: 'btn btn-warning' %>
-      </div>
-
-
-  </div>
+    </div>
   </div>
 </div>
 
