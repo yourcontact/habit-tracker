@@ -35,9 +35,22 @@ class HabitsController < ApplicationController
     end
   end
 
+  def done
+    @habit = Habit.find(params[:id])
+    @habit.done!
+    current_user.score += 1
+    current_user.save
+  end
+
+  def destroy
+    @habit = Habit.find(params[:id])
+    @habit.destroy
+    redirect_to habits_path
+  end
+
   private
 
   def habit_params
-    params.require(:habit).permit(:name, :daily, :repeat, :reminder, :unit_id, :count, :days => [])
+    params.require(:habit).permit(:name, :reminder)
   end
 end

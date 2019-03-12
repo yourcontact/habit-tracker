@@ -1,8 +1,8 @@
 class Habit < ApplicationRecord
   has_many :users, through: :user_habits
   has_many :user_habits
-  belongs_to :unit
   belongs_to :user
+  enum status: [ :undone, :done]
   #before_save :remove_blanks
 
   #validates :days, inclusion: { in: %w(Mon Tue Wed Thu Fri Sat Sun)}
@@ -16,6 +16,6 @@ class Habit < ApplicationRecord
   # validates :status, default: 0
 
   #def remove_blanks
-   # self.days.reject!(&:blank?).to_s
+  # self.days.reject!(&:blank?).to_s
   #end
 end
