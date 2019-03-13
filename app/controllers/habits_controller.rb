@@ -40,6 +40,9 @@ class HabitsController < ApplicationController
     @habit.done!
     current_user.score += 1
     current_user.save
+    respond_to do |format|
+      format.js
+    end
   end
 
   def destroy

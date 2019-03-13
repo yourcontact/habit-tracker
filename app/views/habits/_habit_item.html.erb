@@ -1,9 +1,16 @@
- <div id="habit-<%= habit.id %>">
-  <%=link_to habit.name, edit_habit_path(habit) %>
-  <% if habit.done? %>
-  <i class="fa fa-check"></i>
-  <% else %> 
-  <%= link_to 'mark as done', done_habit_path(habit), method: :post, remote: true %>
-  <% end %>
 
- </div>
+<div class="scoreboard-card scoreboard-card-gray" id="habit-<%= habit.id%>">
+  <div class="scoreboard-username">
+    <h4><%=link_to habit.name, edit_habit_path(habit) %></h4>
+  </div>
+
+  <div class="scoreboard-score">
+     <% if habit.done? %>
+        <i class="fas fa-check-circle fa-2x"></i>
+     <% else %> 
+        <%= link_to done_habit_path(habit), method: :post, remote: true do %>
+          <i class="fas fa-circle fa-2x"></i>
+      <% end %>
+     <% end %>
+  </div>
+</div>
