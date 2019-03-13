@@ -1,4 +1,5 @@
 document.getElementById("user-<%= @user.id %>").outerHTML = "<%= j render 'users/user_item', user: @user %>"
+document.getElementById("user-<%= @user.id %>").outerHTML = "<%= j render 'scoreboards/scoreboard_card', user: @user %>"
 
 
 

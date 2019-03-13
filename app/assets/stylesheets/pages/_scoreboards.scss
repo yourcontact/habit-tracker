@@ -33,4 +33,12 @@
       margin-bottom: 0;
     }
   }
+  .fa-trash {
+    font-size: 15px;
+    color: #D5D5D5;
+    display: none;
+  }
+}
+.scoreboard-card:hover .fa-trash {
+  display: inline-block;
 }
