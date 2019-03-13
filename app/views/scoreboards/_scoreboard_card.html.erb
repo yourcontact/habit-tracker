@@ -1,24 +1,14 @@
-<div class="scoreboard-card">
-  <% if current_user.is_following?(user) %>
+<div class="scoreboard-card" id="user-scoreboard-<%= user.id %>">
     <img class="scoreboard-avatar" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
-    <div class="scoreboard-username" id="user-<%= user.id %>">
+    <div class="scoreboard-username">
       <h4>
         <%= user.username %>
         <%= link_to unfollow_user_path(user), method: :post, remote: true do%>
-        <i class="fas fa-trash"></i>
+          <i class="fas fa-trash"></i>
+        <% end %>
       </h4>
     </div>
-  <% else %>
-  <% end %>
     <div class="scoreboard-score">
       <p><%= user.score %></p>
     </div>
-</div>
-<% end %>
-
-<div class="scoreboard">
-  <% @users.each do |user| %>
-    <%= render 'scoreboards/scoreboard_card', user: user %>
-    </div>
-  <% end %>
 </div>
