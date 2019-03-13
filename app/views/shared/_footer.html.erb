@@ -1,4 +1,10 @@
+<% if !user_signed_in? %>
+<div class="footer">
+  <div class="footer-links">
+    <%= link_to "Sign up", new_user_registration_path %>
+    <h6>&copy 2019 - Habit Tracker</h6>
 
+<% else %>
 <div class="footer">
   <div class="footer-links">
     <%= link_to "Habits", habits_path %>
@@ -11,6 +17,7 @@
     Made with <i class="fas fa-heart"></i> by Joao & Romain
   </div>
 </div>
+<% end %>
 
 
 
