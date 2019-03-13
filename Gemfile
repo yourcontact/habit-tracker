@@ -18,6 +18,7 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'bootstrap'
 gem 'jquery-rails'
+gem 'twilio-ruby'
 
 
 group :development do
