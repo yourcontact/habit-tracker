@@ -17,4 +17,8 @@ class ApplicationController < ActionController::Base
     @skip_footer = true
   end
 
+  def after_sign_in_path_for(current_user)
+    habits_path
+  end
+
 end
