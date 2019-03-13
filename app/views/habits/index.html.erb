@@ -1,7 +1,16 @@
-<h1 class="title">Habits</h1>
+<div class="title">
+  <h1>Habits</h1>
+</div>
 
-<% @habits.each do |habit| %>
-  <%= render 'habits/habit_item', habit: habit %>
-<% end %>
+<div class="scoreboard">
+  <% @habits.each do |habit| %>
+    <%= render 'habits/habit_item', habit: habit %>
+  <% end %>
+</div>
+
+
+
+
+
 
 
