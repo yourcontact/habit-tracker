@@ -1,4 +1,11 @@
-document.getElementById("user-<%= @user.id %>").outerHTML = "<%= j render 'users/user_item', user: @user %>"
+var searchUser = document.getElementById("user-search-<%= @user.id %>")
 
+if (searchUser) {
+  searchUser.outerHTML = "<%= j render 'users/user_item', user: @user %>"
+}
 
+var scoreboardUser = document.getElementById("user-scoreboard-<%= @user.id %>")
 
+if (scoreboardUser) {
+  scoreboardUser.remove()
+}

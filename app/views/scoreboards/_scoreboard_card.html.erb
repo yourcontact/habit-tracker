@@ -1,0 +1,14 @@
+<div class="scoreboard-card" id="user-scoreboard-<%= user.id %>">
+    <img class="scoreboard-avatar" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
+    <div class="scoreboard-username">
+      <h4>
+        <%= user.username %>
+        <%= link_to unfollow_user_path(user), method: :post, remote: true do%>
+          <i class="fas fa-trash"></i>
+        <% end %>
+      </h4>
+    </div>
+    <div class="scoreboard-score">
+      <p><%= user.score %></p>
+    </div>
+</div>

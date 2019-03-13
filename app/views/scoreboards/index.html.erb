@@ -1,21 +1,10 @@
-
 <div class="title">
   <h1>Scoreboard</h1>
 </div>
 
 <div class="scoreboard">
   <% @users.each do |user| %>
-    <div class="scoreboard-card">
-      <img class="scoreboard-avatar" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
-
-      <div class="scoreboard-username">
-        <h4><%= user.username %></h4>
-      </div>
-
-      <div class="scoreboard-score">
-        <p><%= user.score %></p>
-      </div>
-    </div>
+    <%= render 'scoreboards/scoreboard_card', user: user %>
   <% end %>
 </div>
 
