@@ -18,6 +18,8 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'bootstrap'
 gem 'jquery-rails'
+gem 'cloudinary', '~> 1.9.1'
+gem 'carrierwave', '~> 1.2'
 
 
 group :development do

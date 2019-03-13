@@ -3,6 +3,7 @@
     <div class="scoreboard-username">
       <p class="user-paragraph">
         <%= user.username %>
+        <%= cl_image_tag @article.photo, height: 300, width: 400, crop: :fill %>
         <%= link_to unfollow_user_path(user), method: :post, remote: true do%>
           <i class="fas fa-trash"></i>
         <% end %>

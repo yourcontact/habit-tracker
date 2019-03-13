@@ -14,7 +14,7 @@
       <div class="form-habit">
         <div class="form-inputs">
             <%= f.input :name, required: true %>
-            <%= f.input :reminder, required: true, :style => 'display: flex;'%>
+            <%= f.input :reminder, required: true, input_html: { step: 300 }, :style => 'display: flex;'%>
           </div>
           <div class="form-actions form-habit-submit">
             <%= f.button  :submit %>
