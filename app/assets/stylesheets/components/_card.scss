@@ -1,32 +1,16 @@
+.card-landing {
+  padding: 10px 0px;
+  margin-bottom: 15px;
+  background: white;
+  border-radius: 3px;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
 .cards {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  padding: 10px 20px;
+  padding: 20px 0px;
 }
 
-.create {
-  padding: 3px 0px;
-  margin-bottom: 15px;
-  background: white;
-  border-radius: 3px;
-  box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-}
-
-.points {
-  padding: 3px 0px;
-  background: white;
-  margin-bottom: 15px;
-  border-radius: 3px;
-  box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-}
-
-.compete {
-  padding: 3px 0px;
-  background: white;
-  margin-bottom: 15px;
-  border-radius: 3px;
-  box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-}
 
 h4 {
   font-weight: initial;
@@ -34,6 +18,7 @@ h4 {
 }
 
 p {
+  padding: 25px;
   font-weight: lighter;
   font-size: initial;
 }

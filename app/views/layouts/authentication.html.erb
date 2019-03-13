@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8">
@@ -7,18 +6,14 @@
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
 
-    <%# render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
 
     <div class="application-content">
       <%= yield %>
     </div>
-    <%= render 'shared/footer'%>
-    <%#= render 'shared/footer' unless @skip_footer %>
 
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
