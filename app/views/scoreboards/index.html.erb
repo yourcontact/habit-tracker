@@ -3,9 +3,23 @@
 </div>
 
 <div class="scoreboard">
+
+  <div class="scoreboard-card">
+      <%= cl_image_tag current_user.photo, class: 'scoreboard-avatar' %>
+      <div class="scoreboard-username">
+        <p class="user-paragraph">
+          <%= current_user.username %>
+        </p>
+      </div>
+      <div class="scoreboard-score">
+        <p><%= current_user.score %></p>
+      </div>
+  </div>
+
   <% @users.each do |user| %>
     <%= render 'scoreboards/scoreboard_card', user: user %>
   <% end %>
+
 </div>
 
 
