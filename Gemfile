@@ -19,6 +19,8 @@ gem 'webpacker'
 gem 'bootstrap'
 gem 'jquery-rails'
 gem 'twilio-ruby'
+gem 'sidekiq'
+gem 'sidekiq-failures', '~> 1.0'
 
 
 group :development do
