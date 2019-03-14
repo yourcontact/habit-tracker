@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  #authenticated :user do
-   # root 'habit#index', as: :authenticated_root
-  #end
+  require "sidekiq/web"
+  authenticate :user, lambda { |u| u.admin } do
+    mount Sidekiq::Web => '/sidekiq'
+  end
 
   root to: 'pages#home'
 

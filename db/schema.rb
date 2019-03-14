@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_14_121140) do
+ActiveRecord::Schema.define(version: 2019_03_14_174224) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,23 @@ ActiveRecord::Schema.define(version: 2019_03_14_121140) do
     t.index ["user_id"], name: "index_habits_on_user_id"
   end
 
+  create_table "notifications", id: :serial, force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "actor_id"
+    t.string "notify_type", null: false
+    t.string "target_type"
+    t.integer "target_id"
+    t.string "second_target_type"
+    t.integer "second_target_id"
+    t.string "third_target_type"
+    t.integer "third_target_id"
+    t.datetime "read_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id", "notify_type"], name: "index_notifications_on_user_id_and_notify_type"
+    t.index ["user_id"], name: "index_notifications_on_user_id"
+  end
+
   create_table "units", force: :cascade do |t|
     t.string "name"
     t.integer "weight"
@@ -71,6 +88,7 @@ ActiveRecord::Schema.define(version: 2019_03_14_121140) do
     t.integer "score", default: 0
     t.string "photo"
     t.string "whatsapp"
+    t.boolean "admin", default: false, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

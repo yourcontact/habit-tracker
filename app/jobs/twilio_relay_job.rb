@@ -7,7 +7,8 @@ class TwilioRelayJob < ApplicationJob
     client.messages.create({
       from: ENV['TWILIO_PHONE_NUMBER'],
       to: "whatsapp:#{habit.user.whatsapp}",
-      body: "Here is a reminder for you to #{habit.name}"
+      body: "YO #{habit.user.username}. Get #{habit.name} done."
     })
   end
 end
+
