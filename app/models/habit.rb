@@ -15,7 +15,17 @@ class Habit < ApplicationRecord
   # validates :reminder, presence: true
   # validates :status, default: 0
 
+  after_create :set_reminder
+
   #def remove_blanks
   # self.days.reject!(&:blank?).to_s
   #end
+
+  private
+
+  def set_reminder
+    return if reminder.nil? || reminder < Time.now
+
+    TwilioRelayJob.set(wait_until: reminder).perform_later(self)
+  end
 end
