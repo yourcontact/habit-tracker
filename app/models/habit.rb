@@ -25,7 +25,6 @@ class Habit < ApplicationRecord
 
   def set_reminder
     return if reminder.nil? || reminder < Time.now
-
     TwilioRelayJob.set(wait_until: reminder).perform_later(self)
   end
 end
