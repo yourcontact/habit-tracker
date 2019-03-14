@@ -43,23 +43,6 @@ ActiveRecord::Schema.define(version: 2019_03_13_170716) do
     t.index ["user_id"], name: "index_habits_on_user_id"
   end
 
-  create_table "notifications", id: :serial, force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "actor_id"
-    t.string "notify_type", null: false
-    t.string "target_type"
-    t.integer "target_id"
-    t.string "second_target_type"
-    t.integer "second_target_id"
-    t.string "third_target_type"
-    t.integer "third_target_id"
-    t.datetime "read_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id", "notify_type"], name: "index_notifications_on_user_id_and_notify_type"
-    t.index ["user_id"], name: "index_notifications_on_user_id"
-  end
-
   create_table "units", force: :cascade do |t|
     t.string "name"
     t.integer "weight"
