@@ -7,19 +7,15 @@
 <% else %>
 <div class="footer">
   <div class="footer-links">
-    <%= link_to "Habits", habits_path %>
-    <%= link_to "New", new_habit_path %>
-    <%= link_to "Scoreboard", scoreboards_path %>
-    <%= link_to "Find", users_path %>
-    <%= link_to destroy_user_session_path, method: :'delete' do %>
+      <%= link_to "Habits", habits_path , id:"footer_habit", class: ""%>
+      <%= link_to "New", new_habit_path, id:"footer_new", class: "" %>
+      <%= link_to "Scoreboard", scoreboards_path, id:"footer_scoreboard", class: "" %>
+      <%= link_to "Find", users_path, id:"footer_find", class: "" %>
+      <%= link_to destroy_user_session_path, method: :'delete' do %>
     <i class="fas fa-power-off"></i>
     <% end %>
   </div>
-  <div class="footer-copyright">
-    Made with <i class="fas fa-heart"></i> by Joao & Romain
-  </div>
 </div>
 <% end %>
-
 
 
