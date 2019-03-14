@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), image-url("pexels-photo.jpg");
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), image-url("undraw_order_confirmed_1m3v.svg");
   background-size: cover;
   background-position: center;
   h1 {
@@ -27,7 +27,7 @@
   }
 
   .btn:hover{
-    background-color: black;
+    background-color: #F3F3F3;
     border-color: transparent;
     border-radius: 3px;
   }
