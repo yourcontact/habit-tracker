@@ -1,8 +1,8 @@
 <div class="scoreboard-card" id="user-search-<%= user.id %>">
-  <img class="scoreboard-avatar" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
+  <%= cl_image_tag user.photo, class: 'scoreboard-avatar' %>
 
   <div class="scoreboard-username">
-    <p><%= user.username %></p>
+    <p class="user-paragraph"><%= user.username %></p>
   </div>
 
   <div class="scoreboard-score">

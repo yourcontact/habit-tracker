@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  mount_uploader :photo, PhotoUploader
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :user_habits
@@ -15,6 +17,7 @@ class User < ApplicationRecord
   validates :username, presence: true
   validates :email, presence: true, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }
   validates :whatsapp, presence: true#, format: { with: /\A\+?[1-9]\d{1,14}\z}/ }
+
 
   def follow(user_id)
     following_relationships.create(following_id: user_id)
