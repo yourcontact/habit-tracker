@@ -15,7 +15,7 @@ class User < ApplicationRecord
   has_many :following, through: :following_relationships, source: :following
 
   validates :username, presence: true
-  validates :email, presence: true, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }
+  #validates :email, presence: true, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }
   #validates :whatsapp, presence: true, format: { with: /\A\+?[1-9]\d{1,14}\z}/ }
 
 

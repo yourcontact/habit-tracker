@@ -23,6 +23,13 @@ user = User.new(username: "businessman", email: "paulo@gmail.com", password: "12
 user.remote_photo_url = 'https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/vnlkdtuj6n4g5osvdjzp.jpg'
 user.save
 
+user = User.new(username: "iloverice", email: "mona@gmail.com", password: "123456", score: "98")
+user.remote_photo_url = 'https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/t5ajqdt3diuvxsaufioi.jpg'
+user.save
+
+user = User.new(username: "yesman", email: "yesman@gmail.com", password: "123456", score: "98")
+user.remote_photo_url = 'https://avatars3.githubusercontent.com/u/10147715?v=4'
+user.save
 
 
 
@@ -38,6 +45,8 @@ unit.save
 
 unit = Unit.new(name: 'Times', weight: 1)
 unit.save
+
+
 
 #create 5 habits, 3 habits for the first user User.all[0]
 habit = Habit.new(name: 'code', reminder: 1)
@@ -72,12 +81,6 @@ User.all[0].follow(User.all[1].id)
 User.all[0].follow(User.all[2].id)
 User.all[0].follow(User.all[3].id)
 User.all[0].follow(User.all[4].id)
-User.all[0].follow(User.all[5].id)
-User.all[0].follow(User.all[6].id)
-User.all[0].follow(User.all[7].id)
-User.all[0].follow(User.all[8].id)
-User.all[0].follow(User.all[9].id)
-User.all[0].follow(User.all[10].id)
 
 
 
